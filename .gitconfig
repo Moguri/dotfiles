@@ -1,0 +1,14 @@
+[user]
+	email = mogurijin@gmail.com
+	name = Mitchell Stokes
+[push]
+	default = simple
+[credential]
+	helper = cache
+[svn]
+	pushmergeinfo = true
+[core]
+	autocrlf = input
+	editor = vim
+[alias]
+	co = checkout
