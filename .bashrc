@@ -8,7 +8,7 @@
 alias ls='ls --color=auto'
 
 export EDITOR=vim
-export TERM=konsole-256color
+export TERM=xterm-256color
 export QT_IM_MODULE=ibus
 
 source /usr/share/git/completion/git-prompt.sh
