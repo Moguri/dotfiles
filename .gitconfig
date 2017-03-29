@@ -15,3 +15,7 @@
 	sl = stash list
     ss = "!f() { git show stash@{$1}; }; f"
     sp = "!f() { git stash pop stash@{$1}; }; f"
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
