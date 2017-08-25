@@ -1,25 +1,26 @@
 autocmd! bufwritepost .vimrc source %
 
-set wrapscan
+set nocompatible
+filetype off
 set number
-set autoindent
-set smartindent
-set cindent
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set expandtab
 set spell spelllang=en_us
-set autoread
 
 let mapleader = ' '
 
 " Pathogen
-filetype off
-execute pathogen#infect()
-execute pathogen#helptags()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-sensible'
+Plugin 'easymotion/vim-easymotion'
+call vundle#end()
 filetype plugin indent on
-syntax on
 
 "CtrlP
 let g:ctrlp_working_path_mode = 'r'
@@ -36,11 +37,6 @@ map <Leader> <Plug>(easymotion-prefix)
 " Solarized
 set background=dark
 colorscheme solarized
-
-" YouCompleteMe
-let g:ycm_global_ycm_extra_conf = '/usr/share/vim/vimfiles/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-let g:ycm_python_binary_path = 'python'
-let g:ycm_autoclose_preview_window_after_completion = 1
 
 " Per filetype settings
 autocmd Filetype javascript setlocal ts=2 sw=2 sts=2 expandtab
