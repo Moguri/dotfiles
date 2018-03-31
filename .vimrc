@@ -1,7 +1,5 @@
 autocmd! bufwritepost .vimrc source %
 
-set nocompatible
-filetype off
 set number
 set tabstop=4
 set shiftwidth=4
@@ -11,7 +9,6 @@ set spell spelllang=en_us
 
 let mapleader = ' '
 
-" Pathogen
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'

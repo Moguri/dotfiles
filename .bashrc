@@ -16,7 +16,7 @@ if [ -e /usr/share/git/completion/git-prompt.sh ]; then
     PS1='[\u@\h $(__git_ps1 "%s:")\W]\$ '
 fi
 
-alias vi=vim
+alias packer='packer --auronly'
 
 export npm_config_prefix=~/.node_modules
 PATH=${npm_config_prefix}/bin:${HOME}/bin:${PATH}
@@ -31,4 +31,9 @@ fi
 
 if [ -e /usr/local/bin/virtualenvwrapper.sh ]; then
     source /usr/local/bin/virtualenvwrapper.sh
+fi
+
+
+if [[ -n $SSH_CONNECTION && -z $TMUX ]]; then
+    tmux a
 fi
