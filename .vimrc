@@ -13,8 +13,10 @@ call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'kien/ctrlp.vim'
 Plug 'altercation/vim-colors-solarized'
+Plug 'python-mode/python-mode', { 'branch': 'develop' }
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdcommenter'
+Plug 'w0rp/ale'
 call plug#end()
 
 "CtrlP
@@ -22,6 +24,14 @@ let g:ctrlp_working_path_mode = 'r'
 if executable("ag")
     let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 endif
+
+" python-mode
+let g:pymode_folding = 0
+let g:pymode_lint = 0
+let g:pymode_rope = 0
+let g:pymode_run = 0
+let g:pymode_breakpoint = 0
+let g:pymode_options_colorcolumn = 0
 
 "EasyMotion
 map <Leader> <Plug>(easymotion-prefix)
