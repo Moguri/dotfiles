@@ -10,6 +10,7 @@ alias ls='ls --color=auto'
 export EDITOR=vim
 export TERM=xterm-256color
 export QT_IM_MODULE=ibus
+export HISTCONTROL=ignoredups
 
 if [ -e /usr/share/git/completion/git-prompt.sh ]; then
     source /usr/share/git/completion/git-prompt.sh
