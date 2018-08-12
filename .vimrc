@@ -13,11 +13,17 @@ call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'kien/ctrlp.vim'
 Plug 'altercation/vim-colors-solarized'
-Plug 'python-mode/python-mode', { 'branch': 'develop' }
+Plug 'python-mode/python-mode'
+Plug 'davidhalter/jedi-vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdcommenter'
 Plug 'w0rp/ale'
+Plug 'ajh17/VimCompletesMe'
 call plug#end()
+
+"Persistent UndoA
+set undodir=~/.vim/undo
+set undofile
 
 "CtrlP
 let g:ctrlp_working_path_mode = 'r'
