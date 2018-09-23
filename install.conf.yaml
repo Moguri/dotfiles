@@ -11,3 +11,4 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
+    - [while read t; do base16-manager install $t 2> /dev/null || true; done < base16-manager-templates, Installing base16-manager templates]
