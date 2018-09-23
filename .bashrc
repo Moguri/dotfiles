@@ -8,7 +8,6 @@
 alias ls='ls --color=auto'
 
 export EDITOR=vim
-export TERM=xterm-256color
 export QT_IM_MODULE=ibus
 export HISTCONTROL=ignoredups
 
@@ -24,6 +23,13 @@ PATH=${npm_config_prefix}/bin:${HOME}/bin:${PATH}
 
 unset MANPATH
 MANPATH="${npm_config_prefix}/share/man:$(manpath)"
+
+source "$HOME/.bash_completion"
+
+BASE16_SHELL="$HOME/.base16-manager/chriskempton/base16-shell/"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+        eval "$("$BASE16_SHELL/profile_helper.shv")"
 
 export WORKON_HOME=~/.venv
 if [ -e /usr/bin/virtualenvwrapper.sh ]; then

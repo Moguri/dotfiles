@@ -12,7 +12,7 @@ let mapleader = ' '
 call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'kien/ctrlp.vim'
-Plug 'altercation/vim-colors-solarized'
+Plug 'chriskempson/base16-vim'
 Plug 'python-mode/python-mode'
 Plug 'davidhalter/jedi-vim'
 Plug 'easymotion/vim-easymotion'
@@ -21,7 +21,7 @@ Plug 'w0rp/ale'
 Plug 'ajh17/VimCompletesMe'
 call plug#end()
 
-"Persistent UndoA
+"Persistent Undo
 set undodir=~/.vim/undo
 set undofile
 
@@ -42,16 +42,20 @@ let g:pymode_options_colorcolumn = 0
 "EasyMotion
 map <Leader> <Plug>(easymotion-prefix)
 
-" Solarized
-set background=dark
-colorscheme solarized
+" Colorscheme from base16-manager
+let base16colorspace=256
+source ~/.vim/colorscheme.vim
+hi Normal ctermbg=NONE
+hi SpellBad cterm=underline ctermbg=NONE
+hi SpellCap cterm=underline ctermbg=NONE
+hi SpellRare cterm=underline ctermbg=NONE
+hi SpellLocal cterm=underline ctermbg=NONE
 
 " Persistent undo
 set undofile
 set undodir=$HOME/.vim/undo
 set undolevels=1000
 set undoreload=10000
-
 
 " Per filetype settings
 autocmd Filetype javascript setlocal ts=2 sw=2 sts=2 expandtab
