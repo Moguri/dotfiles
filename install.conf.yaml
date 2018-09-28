@@ -8,7 +8,17 @@
     ~/.bash_completion: .bash_completion
     ~/.gitconfig: .gitconfig
     ~/.tmux.conf: .tmux.conf
+    ~/.config/i3/config:
+        create: true
+        path: i3.conf
+    ~/.config/i3status/config:
+        create: true
+        path: i3status.conf
+    ~/.config/termite/config:
+        create: true
+        path: termite.conf
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
     - [while read t; do base16-manager install $t 2> /dev/null || true; done < base16-manager-templates, Installing base16-manager templates]
+    - [base16-manager set solarized-dark, Set color scheme]
