@@ -6,6 +6,7 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set spell spelllang=en_us
+set hlsearch
 
 let mapleader = ' '
 
