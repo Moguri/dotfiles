@@ -27,10 +27,6 @@ Plug 'ajh17/VimCompletesMe'
 Plug 'tikhomirov/vim-glsl'
 call plug#end()
 
-"Persistent Undo
-set undodir=~/.vim/undo
-set undofile
-
 "CtrlP
 let g:ctrlp_working_path_mode = 'r'
 if executable("ag")
