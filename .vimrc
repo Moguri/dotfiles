@@ -24,6 +24,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdcommenter'
 Plug 'w0rp/ale'
 Plug 'ajh17/VimCompletesMe'
+Plug 'tikhomirov/vim-glsl'
 call plug#end()
 
 "Persistent Undo
