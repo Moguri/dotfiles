@@ -9,10 +9,14 @@ set spell spelllang=en_us
 
 let mapleader = ' '
 
+function FixupBase16(info)
+    !sed -i '/Base16hi/\! s/a:\(attr\|guisp\)/l:\1/g' ~/.vim/plugged/base16-vim/colors/*.vim
+endfunction
+
 call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'kien/ctrlp.vim'
-Plug 'chriskempson/base16-vim'
+Plug 'chriskempson/base16-vim', { 'do': function('FixupBase16') }
 Plug 'python-mode/python-mode'
 Plug 'davidhalter/jedi-vim'
 Plug 'easymotion/vim-easymotion'
