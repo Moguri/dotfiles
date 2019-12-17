@@ -5,6 +5,7 @@
     ~/.vim: .vim/
     ~/.vimrc: .vimrc
     ~/.bashrc: .bashrc
+    ~/.inputrc: inputrc
     ~/.bash_completion: .bash_completion
     ~/.gitconfig: .gitconfig
     ~/.tmux.conf: .tmux.conf
